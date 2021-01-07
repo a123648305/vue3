@@ -1,12 +1,5 @@
 import { createStore } from 'vuex'
-
+import common from './module/test'
 export default createStore({
-  state: {
-  },
-  mutations: {
-  },
-  actions: {
-  },
-  modules: {
-  }
+	module:{common}
 })
