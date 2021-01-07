@@ -37,10 +37,8 @@ export default {
         povper:(el,bindling)=>{
             let context=bindling.instance
             el.onclick =function(){
-                console.log('click',bindling.arg)
-                console.log(el.offsetTop,context.popoverStyle)
                 context.popoverTop=(el.offsetTop+40)+'px'
-                context.showPopover=true
+                context.showPopover=!context.showPopover
             }
         }
     },

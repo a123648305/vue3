@@ -1,5 +1,6 @@
 <template>
   <div class="home">
+    <van-search v-model="searchWord"  shape="round" background="#4fc08d" placeholder="请输入搜索关键词" class="search-box" @search="onSearch" @cancel="onCancel"/>
     <van-swipe class="my-swipe" :autoplay="3000" indicator-color="white">
       <van-swipe-item v-for="(item,index) in images" :key="index">
         <van-image lazy-load :src="item" alt="img" fit="contain"/>
@@ -23,7 +24,6 @@ export default {
   },
   setup(){
     const name=ref('wxs')
-    const arr=ref([1,2,3,5,6])
     const active=ref(0)
     const musicType=[
       {
@@ -44,6 +44,14 @@ export default {
       'https://img.yzcdn.cn/vant/apple-1.jpg',
       'https://img.yzcdn.cn/vant/apple-2.jpg',
     ]
+    const searchWord = ref('');
+    const onSearch = (val) => {
+      console.warn(val);
+    };
+    const onCancel = () => {
+      console.error('取消');
+    };
+
     function change(index){
       console.log(index,'change')
     }
@@ -56,7 +64,7 @@ export default {
         console.warn(error)
       }
     }
-    return {change,images,active,musicType,songData,getSongList,songNum,name,arr}
+    return {change,images,active,musicType,songData,getSongList,songNum,name,searchWord,onSearch,onCancel}
   },
   mounted(){
     console.log('now fetch songList')
@@ -73,7 +81,10 @@ export default {
   height: 400px;
   .my-swipe{
     height: 150px;
-    border: 1px solid red;
+  }
+  .search-box{
+    // position: fixed;
+    // z-index: 100;
   }
 }
 </style>
