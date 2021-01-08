@@ -6,7 +6,7 @@ import api from './http/request'
 // import './mock'
 
 import 'lib-flexible/flexible.js' 
-import { Button, Tabbar, TabbarItem,Swipe, SwipeItem,Image as VanImage ,Lazyload ,Tab, Tabs ,Icon ,Tag ,Popover,Search } from 'vant'
+import { Button, Tabbar, TabbarItem,Swipe, SwipeItem,Image as VanImage ,Lazyload ,Tab, Tabs ,Icon ,Tag ,Popover,Search ,Cell, CellGroup} from 'vant'
 const app=createApp(App)
 app.config.globalProperties.$api=api
 
@@ -31,5 +31,7 @@ app.use(Button)
 .use(Tag)
 .use(Popover)
 .use(Search)
+.use(Cell)
+.use(CellGroup)
 app.use(store).use(router).mount('#app')
 

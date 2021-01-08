@@ -77,7 +77,7 @@ export default {
 
 <style lang="less">
 .home{
-  width: 375px;
+
   height: 400px;
   .my-swipe{
     height: 150px;
