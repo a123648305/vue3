@@ -1,7 +1,10 @@
 import axios from 'axios'
 var instance = axios.create({
     baseURL: '/api',
-    timeout:10000
+    timeout:10000,
+    headers:{
+      'Content-Type': 'application/json; charset=utf-8'
+    }
 });
 
 // 添加请求拦截器

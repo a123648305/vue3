@@ -68,6 +68,7 @@ export default {
   },
   mounted(){
     console.log('now fetch songList')
+    console.log(this.$store.state.common,this.$store.state.test)
     this.getSongList()
   },
   methods:{

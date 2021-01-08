@@ -10,6 +10,7 @@ import { Button, Tabbar, TabbarItem,Swipe, SwipeItem,Image as VanImage ,Lazyload
 const app=createApp(App)
 app.config.globalProperties.$api=api
 
+console.log(store)
 // app.directive('povper',(el,binding,vnode)=>{
 //     //这将被作为 `mounted` 和 `updated` 调用
 //     console.log(el,'el')

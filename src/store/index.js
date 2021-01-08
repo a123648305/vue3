@@ -1,5 +1,6 @@
 import { createStore } from 'vuex'
-import common from './module/test'
+import test from './module/test'
+import common from './common'
 export default createStore({
-	module:{common}
+	modules:{common,test}
 })
